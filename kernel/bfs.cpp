@@ -137,14 +137,12 @@ void run_bfs_ms(graph_t& g, vid_t root, bool print_result) {
     vid_t v_count = csr->get_vcount();
 
     // Define variables
-    vid_t *vertices = new vid_t[v_count];
     vid_t *frontiers = new vid_t[v_count];      // Using fixed length array here for parallelism
     vid_t *new_frontiers = new vid_t[v_count];
     vid_t *parents = new vid_t[v_count];
 
     // Initialization
     for(vid_t i = 0; i < v_count ; i++) {
-        vertices[i] = i;
         frontiers[i] = -1;
         new_frontiers[i] = -1;
         parents[i] = -1;
@@ -156,7 +154,7 @@ void run_bfs_ms(graph_t& g, vid_t root, bool print_result) {
         #pragma omp parallel
         {
             #pragma omp for
-            for(int i = 0 ; i < v_count ; i++) {    // i is the current node
+            for(int i = 0 ; i < v_count ; i++) {    // loop over all the vertices. i is the current node
                 if(parents[i] == -1) {
                     // Get the neighbor of the current node
                     for (int j = offset[i]; j < offset[i+1]; j++) {

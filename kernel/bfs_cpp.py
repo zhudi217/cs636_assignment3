@@ -61,7 +61,7 @@ def test_csr():
 
     print(G.get_vcount())
 
-    # Note: I'm not very familiar with C++ and the printing function of bottom-up BFS is not very efficient (because it's a tree traversal).
+    # Note: The printing function of bottom-up BFS is costly (because it's a tree traversal).
     # Please set the second argument to False when testing the running time.
 
     root = 0;

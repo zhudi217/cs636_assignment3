@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zhudi/bin/CS636_Big_Data/as3/cs636/kernel/bfs.cpp
+cassert
+-
+iostream
+-
+csr.h
+/home/zhudi/bin/CS636_Big_Data/as3/cs636/kernel/csr.h
+list
+-
+algorithm
+-
+omp.h
+-
+
+/home/zhudi/bin/CS636_Big_Data/as3/cs636/kernel/csr.h
+stdint.h
+/home/zhudi/bin/CS636_Big_Data/as3/cs636/kernel/stdint.h
+
